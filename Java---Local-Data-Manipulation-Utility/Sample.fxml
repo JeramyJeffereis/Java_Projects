@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Parent?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+	
+<BorderPane  id="borderPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SampleController">
+	<top>
+		<HBox alignment="CENTER_LEFT" spacing="10" id="topbar">
+			<children>
+				<TextField prefHeight = "10.0" prefWidth = "350.0" text="Enter search criteria" 
+				fx:id="search" id="search" >
+				</TextField>
+				<Button prefHeight = "10.0" prefWidth = "300.0" fx:id = "dbn" id="dbn" text="Select Data" >
+				</Button>
+				<Region prefHeight="10.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+				<Label alignment="CENTER" prefHeight="30.0" prefWidth = "400.0" text = "Hospital General Information Database" fx:id ="title" id = "title"/>
+				<Region prefHeight="10.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+				<HBox alignment="CENTER_RIGHT" spacing = "10" >
+         			<children>
+            			<TextField prefWidth = "200.0" prefHeight = "10.0" text="Enter column names" fx:id="input" id="input" />
+            			<Button prefWidth = "300.0" prefHeight = "10.0" fx:id = "col" id="col" text="Select Columns" >
+						</Button>
+         			</children>
+      			</HBox>
+			</children>
+		</HBox>
+	</top>
+	<center>
+			<TableView fx:id = "table" id = "table" />
+	</center>
+	<bottom>
+		<HBox id="bottomBaar">
+			<Button id="export_btn" text="Export data">
+			</Button>
+			<Button id="help_btn" text="Help">
+			</Button>
+			<Region prefHeight="10.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+				<HBox alignment="CENTER_RIGHT" spacing = "10" >
+         			<children>
+            			<Button prefWidth = "300.0" prefHeight = "10.0" fx:id = "res" id="res" text="Reset" >
+						</Button>
+         			</children>
+      			</HBox>
+		</HBox>
+	</bottom>
+</BorderPane>
